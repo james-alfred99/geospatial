@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+    <title>GeoSpatial Dashboard</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="/location">Find</a></li>
+                <div class="content">
+                    <span id="geo">GeoSpatial Dashboard</span>
+                </div>
+            </ul>
+        </nav>
+
+
+
+        <div class="subcontainer">
+            <h2>Image Details</h2>
+           
+            <div class="form">
+                <form action="/uploadImage" method="post" enctype="multipart/form-data">
+
+                    <div>
+                        <label class="textLabel" for="fileInput">Select a file!</label><br>
+                        <input type="file" name="file" id="fileInput" required><br><br>
+                    </div>
+
+
+                    <div>
+                        <label class="textLabel" for="districtName">District Name</label><br>
+                        <input type="text" id="districtName" name="district" required><br><br>
+                    </div>
+
+                    <div>
+                        <input type="submit" class="saveImage">
+                    </div>
+
+                    <p>
+
+                        {% with messages=get_flashed_messages()%}
+                        {% if messages %}
+                    
+                        {% for message in messages %}
+                        <span>{{ message }}</span>
+                        {% endfor %}
+                    
+                    {% endif %}
+                    {% endwith %}
+                    </p>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            
+           <div class="firstFooter"><br>
+             <span id="geospatial_text">GeoSpatial Dashboard Website</span><br><br>
+             <span class="information">Helps to upload image in database and to</span><br>
+             <span class="information">find particular image by </span><br>
+             <span class="information">entering district name</span>
+           </div>
+
+           <div class="secondFooter">
+             <span class="information">Copyright</span>
+           </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

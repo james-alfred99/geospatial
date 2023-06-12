@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+    <title>Location Finder</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Find</a></li>
+                <div class="content">
+                    <span id="geo">GeoSpatial Dashboard</span>
+                </div>
+            </ul>
+        </nav>
+        <h2 id="location_heading">Find Image</h2>
+        <div class="subcontainer_location">
+            <form action="/displayImage" method="post" enctype="multipart/form-data">
+                <label class="textLabel" for="districtSearch">Enter District Name :- </label>
+                <input type="text" id="districtSearch" name="dname">
+                <input class="saveImage" type="submit" id="submitDistrict">
+            </form>
+        </div>
+        <div id="main">
+            {% if result %}
+            {% for item in result: %}
+            <div class="adjustmentImage">
+                <img src="{{ item[1] }}">
+                <p class="collectedInfo">District :- <span class="detailedInfo">{{dname}}</span></p>
+                <p class="collectedInfo">Latitude :- <span class="detailedInfo">{{item[3]}}</span></p>
+                <p class="collectedInfo">Longitude :- <span class="detailedInfo">{{item[4]}}</span></p>
+                <p class="collectedInfo">Date :- <span class="detailedInfo">{{item[5]}}</span></p>
+            </div>
+            {% endfor %}
+            {% else%}
+            <div id="noresult">
+                <img id="noresultImg" src="{{url_for('static', filename='/uploads/no_result.jpg')}}" >
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+</body>
+
+</html>

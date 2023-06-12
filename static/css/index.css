@@ -1,0 +1,203 @@
+.container
+{
+    width: 100%;
+    height:fit-content;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar
+{
+ background-color: #3B3B3E;
+ border-radius: 10px;
+}
+
+.navbar ul{
+    overflow: auto;
+}
+
+.navbar li{
+    float: left;
+    list-style: none;
+    margin:13px 20px;
+}
+
+.navbar li a{
+    padding: 3px 3px;
+    text-decoration: none;
+    color:white;
+}
+
+.navbar li a:hover{
+    color: rgb(163,121,51);
+    font-weight: bold;
+}
+
+#geo:hover{
+    color: rgb(163,121,51);
+}
+
+.content
+{
+    float: right;
+    color: white;
+    padding: 12px 75px;
+}
+
+#geo
+{
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.subcontainer
+{
+    margin-top: -14px;
+    text-align: center;
+}
+
+.form
+{
+    display: inline-block;
+    width: 55%;
+    border:2px solid #c8c8c8;
+    text-align: center;
+    background-color: #e7e7e7;
+    box-shadow: 5px 5px 2px #c8c8c8;
+}
+
+.textLabel{
+    color:#060608;
+    font-size:17px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+    margin-top:40px;
+    color:#0a1551;
+}
+
+#location_heading
+{
+    text-align: center;
+}
+
+.form div{
+    margin-top:25px;
+}
+
+#fileInput
+{
+    margin-left:164px;
+    margin-top:10px;
+}
+
+#districtName
+{
+    margin-top:10px; 
+    border-radius: 5px;
+    border: 2px solid gray;
+}
+
+.subcontainer_location{
+    border:2px solid #c8c8c8;
+    text-align:center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #e7e7e7;
+}
+
+#districtSearch{
+    margin-left: 5px;
+    border-radius: 5px;
+    border: 2px solid gray;
+}
+
+#submitDistrict{
+    margin-left:10px;
+}
+
+img{
+    height:200px;
+    width:200px;
+}
+
+.saveImage{
+    width:85px;
+    height:27px;
+    border-radius:5px;
+    border:2px solid gray;
+}
+
+.saveImage:hover{
+    width:85px;
+    height:27px;
+    border-radius:5px;
+    background-color: blue;
+    color:white;
+    font-weight: bold;
+    border-color: transparent;
+}
+
+.footer
+{
+    margin-top:170px;
+}
+
+.firstFooter{
+    background-color: #3B3B3E;
+    color:#e9f5ee;
+    text-align: center;
+}
+
+.secondFooter{
+    background-color: black;
+    color:#e9f5ee;
+    text-align: center;
+    padding-top:1px;
+
+}
+
+#geospatial_text
+{
+    font-size:23px;
+
+}
+
+.information
+{
+    font-size: 11px;
+}
+
+.adjustmentImage{
+    border:3px solid #c8c8c8;
+    display: inline-block;
+}
+
+#main{
+    text-align:center;
+    margin-top: 26px;
+}
+
+.collectedInfo{
+    font-size:18px;
+    font-style: normal;
+    text-align:justify;
+    font-weight:bold;
+}
+
+.detailedInfo{
+    font-size:14px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+#noresult{
+    margin-left:50px;
+}
+
+#noresult img{
+    height:221px;
+    width:251px;
+    border:2px solid #c8c8c8;
+}
